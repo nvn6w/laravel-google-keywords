@@ -65,7 +65,7 @@ class KeywordsFetcher
 	protected function getAllDates()
 	{
 		return [
-			'startDate' => Carbon::yesterday()->subMonth(3),
+			'startDate' => Carbon::yesterday()->subMonth(config('laravel-google-keywords.default.startDate')),
             'endDate' => Carbon::yesterday(),
 		];
 	}
