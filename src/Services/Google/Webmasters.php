@@ -22,6 +22,7 @@ class Webmasters
         $request->setEndDate($params['endDate']->format('Y-m-d'));
         $request->setDimensions(['query', "date"]);
         $request->setAggregationType('byProperty');
+	$request->setRowLimit( config('laravel-google-keywords.default.rowLimit', 1000));
 
         $service = new Google_Service_Webmasters($this->client);
         $analytics = $service->searchanalytics;
