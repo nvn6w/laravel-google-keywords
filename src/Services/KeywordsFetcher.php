@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace HighSolutions\GoogleKeywords\Services;
 
@@ -72,10 +72,10 @@ class KeywordsFetcher
 
 	protected function getYesterdayDates()
 	{
-		return [
-			'startDate' => Carbon::yesterday(),
-            'endDate' => Carbon::yesterday(),
-		];
+        return [
+            'startDate' => Carbon::now()->addDays(-3),
+            'endDate' => Carbon::now()->addDays(-2),
+        ];
 	}
 
 }
