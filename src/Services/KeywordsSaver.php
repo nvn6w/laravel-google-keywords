@@ -24,7 +24,7 @@ class KeywordsSaver
                     'avg_position' => $result->position,
                 ]);
             } catch (QueryException $e) {
-
+                \Log::error('[GOOGLE][SEARCH][KEYWORD]: ' . $e->getMessage());
             }
         }
 
